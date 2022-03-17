@@ -89,7 +89,8 @@ const Home = () => {
             setValueArr(valueArr => [...valueArr, e.value])
         }
         else {
-            let a = valueArr.splice(valueArr.indexOf(e.value, 0), 1)
+            // let a =
+            valueArr.splice(valueArr.indexOf(e.value, 0), 1)
             setGenreId(valueArr.join())
 
             //Wenn keine Checkbox ausgewählt ist, lade Startseite erneut
@@ -116,6 +117,7 @@ const Home = () => {
                     setIsPending(false);
                     setMovies(json.results)
                     setError(null)
+                    console.log(genreId);
                 })
 
                 .catch(err => {
