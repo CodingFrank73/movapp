@@ -1,11 +1,7 @@
 
 import { useParams, Link } from "react-router-dom";
-import { createPortal } from "react-dom";
-import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
-import useLocal from "./useLocal";
 import db_genre from '../Data/db_genre.json'
-import db_trailer from '../Data/db_trailer.json'
 import Footer from "./footer";
 
 const MovieDetail = () => {
@@ -52,7 +48,9 @@ const MovieDetail = () => {
                                     <div class="infoDetails">{movie.release_date}</div>
 
                                     {movie.genres.map((genreName) => {
-                                        genreString += genreName.name + ", ";
+                                        return (
+                                            genreString += genreName.name + ", "
+                                        )
                                     })}
 
                                     <div class="hlDetails">Genres</div>
@@ -66,13 +64,14 @@ const MovieDetail = () => {
 
                                     <div className="trailer">
                                         <p>Watch Trailer</p>
+
+                                        {isPendingTrailer && <div>Loading...</div>}
+                                        {errorTrailer && <div>{error}</div>}
                                         {trailer && (
                                             trailer.results.map((element, i) => {
-                                                {
-                                                    i === 0 && (
-                                                        trailerKey = element.key
-                                                    )
-                                                }
+                                                return (
+                                                    i === 0 && (trailerKey = element.key)
+                                                )
                                             })
                                         )}
 
