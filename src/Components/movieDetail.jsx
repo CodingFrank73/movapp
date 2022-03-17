@@ -47,9 +47,8 @@ const MovieDetail = () => {
                                     <div class="infoDetails">{movie.release_date}</div>
 
                                     {movie.genres.map((genreName) => {
-                                        return (
-                                            genreString += genreName.name + ", "
-                                        )
+                                        genreString += genreName.name + ", "
+                                        return
                                     })}
 
                                     <div class="hlDetails">Genres</div>
@@ -68,9 +67,8 @@ const MovieDetail = () => {
                                         {errorTrailer && <div>{error}</div>}
                                         {trailer && (
                                             trailer.results.map((element, i) => {
-                                                return (
-                                                    i === 0 && (trailerKey = element.key)
-                                                )
+                                                i === 0 && (trailerKey = element.key)
+                                                return
                                             })
                                         )}
 

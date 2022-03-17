@@ -117,7 +117,6 @@ const Home = () => {
                     setIsPending(false);
                     setMovies(json.results)
                     setError(null)
-                    console.log(genreId);
                 })
 
                 .catch(err => {
@@ -176,15 +175,14 @@ const Home = () => {
                                                 <div class="movRating">{item.vote_average}</div>
                                                 <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="bild" />
                                                 <figcaption>
+
                                                     {item.genre_ids && (
                                                         item.genre_ids.map((genre) => {
                                                             let result
-                                                            let arr
-
-                                                            arr = genreArr.filter(res => res.id === genre)
+                                                            let arr = genreArr.filter(res => res.id === genre)
                                                             arr[0] === undefined ? result = "Arthouse" : result = arr[0].name
                                                             genreString += result + ", "
-
+                                                            return
                                                         }))}
 
                                                     {item.release_date && (
