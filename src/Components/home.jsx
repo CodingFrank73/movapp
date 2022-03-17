@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import Collapsible from 'react-collapsible';
 import { Link } from 'react-router-dom';
 import db_genre from '../Data/db_genre.json'
-// import Header from './header';
+import Header from './header';
+
 
 const Home = () => {
 
@@ -15,7 +16,6 @@ const Home = () => {
     const [genreId, setGenreId] = useState("")
     const [filter, setFilter] = useState(false)
     const [defaultScreen, setDefaultScreen] = useState(false)
-
 
     useEffect(() => {
         const cleanUp = new AbortController();
@@ -135,14 +135,16 @@ const Home = () => {
 
     return (
         <div className="movieList">
+
+
             <header>
                 <h1><a href="#"><b>.</b>MOV </a></h1>
                 <div className="searchbar">
                     <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" onKeyPress={(e) => e.key === 'Enter' && handleSearch(e.target.value)} />
+                    <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && handleSearch(e.target.value)} />
                 </div>
 
-                <Collapsible trigger="Filter nach Genre">
+                <Collapsible trigger="Filter by Genre">
                     <label htmlFor=""><input type="checkbox" name="" id="" value={28} onChange={(e) => isChecked(e.target)} />Action</label>
                     <label htmlFor=""><input type="checkbox" name="" id="" value={18} onChange={(e) => isChecked(e.target)} />Drama</label>
                     <label htmlFor=""><input type="checkbox" name="" id="" value={10402} onChange={(e) => isChecked(e.target)} />Music</label>
@@ -151,7 +153,6 @@ const Home = () => {
                     <label htmlFor=""><input type="checkbox" name="" id="" value={878} onChange={(e) => isChecked(e.target)} />Science Fiction</label>
                     <label htmlFor=""><input type="checkbox" name="" id="" value={27} onChange={(e) => isChecked(e.target)} />Horror</label>
                 </Collapsible>
-
             </header>
 
             <main>
@@ -201,30 +202,30 @@ const Home = () => {
             </main>
             <footer>
                 <article>
-                    <div class="block">
-                        <div class="links"><a href="index.html"><b>.</b>MOV</a></div>
-                        <div class="imprint"><a href="assets/pages/imprint.html">Imprint</a></div>
+                    <div className="block">
+                        <div className="links"><Link to={-1}><b>.</b>MOV</Link></div>
+                        <div className="imprint"><a href="assets/pages/imprint.html">Imprint</a></div>
                     </div>
-                    <div class="mitte">
+                    <div className="mitte">
                         <div>
-                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook-square"></i></a>
                         </div>
                     </div>
-                    <div class="rechts">
+                    <div className="rechts">
                         <a href="https://de.wikipedia.org/wiki/Make_love,_not_war#/media/Datei:Love_war_(6405241535).jpg"
                             target="_blank">
-                            <p><i class="fa-solid fa-heart"></i> MAKE LOVE</p>
-                            <p>NOT WAR <i class="fa-solid fa-peace"></i></p>
+                            <p><i className="fa-solid fa-heart"></i> MAKE LOVE</p>
+                            <p>NOT WAR <i className="fa-solid fa-peace"></i></p>
                         </a>
                     </div>
                 </article>
             </footer>
-            <div class="urheber">
+            <div className="urheber">
                 <p>&copy; 2022 by Justice League</p>
-                <p>Created with Love <i class="fa-solid fa-heart"></i>
+                <p>Created with Love <i className="fa-solid fa-heart"></i>
                 </p>
-                <p><i class="fa-solid fa-carrot"></i> 1oo% vegan</p>
+                <p><i className="fa-solid fa-carrot"></i> 1oo% vegan</p>
             </div>
 
         </div >

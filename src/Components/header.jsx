@@ -25,14 +25,8 @@ const Header = () => {
                         <label htmlFor=""><input type="checkbox" name="" id="" value={878} onChange={(e) => isChecked(e.target)} />Science Fiction</label>
                         <label htmlFor=""><input type="checkbox" name="" id="" value={27} onChange={(e) => isChecked(e.target)} />Horror</label> */}
                     </Collapsible>
-
-
-
                 </form>
-
             </div>
-
-
         </header>
 
     );

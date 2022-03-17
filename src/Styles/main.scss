@@ -46,11 +46,9 @@ header{
 
 
     .searchbar{
-       
-       
+        text-align: center;
         margin: 0px auto 1rem auto;
         width: 335px;
-        
         background: #24323f;
         border-radius: 25px;
 
@@ -69,6 +67,7 @@ header{
             width: 255px;
             padding: 3px 0 2px 24px;
             margin: 14px 0 15px 8px;
+            outline: none;
         }
         .fa-magnifying-glass{
             color:#21E18C;
@@ -380,6 +379,7 @@ main{
             }
         
             .searchbar{
+                text-align: center;
                 position: absolute;
                 top:42px;
                 left: 0;
@@ -402,6 +402,7 @@ main{
                     width: 255px;
                     padding: 3px 0 2px 24px;
                     margin: 14px 0 15px 8px;
+                    outline: none;
                 }
                 .fa-magnifying-glass{
                     color:#21E18C;

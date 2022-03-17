@@ -66,6 +66,7 @@ header h1:hover a {
   color: #21E18C;
 }
 header .searchbar {
+  text-align: center;
   margin: 0px auto 1rem auto;
   width: 335px;
   background: #24323f;
@@ -86,6 +87,7 @@ header .searchbar input {
   width: 255px;
   padding: 3px 0 2px 24px;
   margin: 14px 0 15px 8px;
+  outline: none;
 }
 header .searchbar .fa-magnifying-glass {
   color: #21E18C;
@@ -349,6 +351,7 @@ footer article .rechts a .fa-solid {
     margin: 34px 0 35px 8%;
   }
   header .searchbar {
+    text-align: center;
     position: absolute;
     top: 42px;
     left: 0;
@@ -370,6 +373,7 @@ footer article .rechts a .fa-solid {
     width: 255px;
     padding: 3px 0 2px 24px;
     margin: 14px 0 15px 8px;
+    outline: none;
   }
   header .searchbar .fa-magnifying-glass {
     color: #21E18C;

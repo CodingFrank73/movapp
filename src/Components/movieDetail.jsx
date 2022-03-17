@@ -17,66 +17,108 @@ const MovieDetail = () => {
 
 
     let genreString = "";
+    let trailerKey = "";
 
     return (
-
         <div className="movie">
+
+            <header>
+                <h1><Link to={-1}><b>.</b>MOV</Link></h1>
+                <div className="searchbar">
+                    {/* <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" onKeyPress={(e) => e.key === 'Enter' && handleSearch(e.target.value)} /> */}
+                </div>
+            </header>
 
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {movie && (
 
-                <div className="movie-container" key={movie.id}>
+                <main>
+                    <section>
+                        <article>
+                            <h2>{movie.title}</h2>
 
-                    <div className="movie-image">
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="bild" />
-                    </div>
-                    <div className="movie-discription">
-                        <h2>{movie.title}</h2>
-                        <p>{movie.release_date}</p>
+                            <div className="details" key={movie.id}>
 
-                        {movie.genres.map((genreName) => {
-                            genreString += genreName.name + ", ";
-                        })}
+                                <div className="poster">
+                                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="bild" />
+                                </div>
 
-                        <p>{(genreString.substring(0, genreString.length - 2))}</p>
-                        <p>{movie.overview}</p>
-                        <p>{movie.vote_average}</p>
-                    </div>
+                                <div className="infos">
 
-                    <div className="movie-trailer">
+                                    <div class="hlDetails">Release Date</div>
+                                    <div class="infoDetails">{movie.release_date}</div>
 
-                        {trailer && (
-                            trailer.results.map((element, i) => {
-                                {
-                                    i === 0 &&
-                                        console.log(element.name);
-                                    console.log(element.key);
-                                    console.log(element.site);
-                                }
+                                    {movie.genres.map((genreName) => {
+                                        genreString += genreName.name + ", ";
+                                    })}
 
-                                // <iframe src="https://www.youtube.com/embed/X5ibkB5ftH0" width={1000} height={500} title={`${element.name}`}></iframe>
-                            })
-                        )}
+                                    <div class="hlDetails">Genres</div>
+                                    <div class="infoDetails">{(genreString.substring(0, genreString.length - 2))}</div>
 
+                                    <div class="hlDetails">Overview</div>
+                                    <div class="infoDetails">{movie.overview}</div>
 
+                                    <div class="hlDetails">Average Voting</div>
+                                    <div class="infoDetails">{movie.vote_average}</div>
 
-                        <iframe src="https://www.youtube.com/embed/X5ibkB5ftH0" width={1000} height={500} title={`hier kommt Name`}></iframe>
-                    </div>
+                                    <div className="trailer">
+                                        <p>Watch Trailer</p>
+                                        {trailer && (
+                                            trailer.results.map((element, i) => {
+                                                {
+                                                    i === 0 && (
+                                                        trailerKey = element.key
+                                                    )
+                                                }
+                                            })
+                                        )}
 
-                    <Link className="btn-back" to={-1}>
-                        <img className="logo" src="logo.svg" alt="bild" />
-                    </Link>
-                </div>
+                                        <iframe src={`https://www.youtube.com/embed/${trailerKey}`} title=".MOV Videoplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </main>
             )
-
-
-
-
             }
-            {/* <Nav /> */}
+            <footer>
+                <article>
+                    <div className="block">
+                        <div className="links"><Link to={-1}><b>.</b>MOV</Link></div>
+                        <div className="imprint"><a href="assets/pages/imprint.html">Imprint</a></div>
+                    </div>
+                    <div className="mitte">
+                        <div>
+                            <a href="https://www.instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook-square"></i></a>
+                        </div>
+                    </div>
+                    <div className="rechts">
+                        <a href="https://de.wikipedia.org/wiki/Make_love,_not_war#/media/Datei:Love_war_(6405241535).jpg"
+                            target="_blank">
+                            <p><i className="fa-solid fa-heart"></i> MAKE LOVE</p>
+                            <p>NOT WAR <i className="fa-solid fa-peace"></i></p>
+                        </a>
+                    </div>
+                </article>
+            </footer>
+            <div className="urheber">
+                <p>&copy; 2022 by Justice League</p>
+                <p>Created with Love <i className="fa-solid fa-heart"></i>
+                </p>
+                <p><i className="fa-solid fa-carrot"></i> 1oo% vegan</p>
+            </div>
         </div >
     );
 }
 
 export default MovieDetail;
+
+
+{/* <Link className="btn-back" to={-1}>
+                        <img className="logo" src="logo.svg" alt="bild" />
+                    </Link> */}
