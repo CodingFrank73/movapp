@@ -1,7 +1,6 @@
 
 import { useParams, Link } from "react-router-dom";
 import useFetch from "./useFetch";
-import db_genre from '../Data/db_genre.json'
 import Footer from "./footer";
 
 const MovieDetail = () => {

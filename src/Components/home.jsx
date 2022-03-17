@@ -4,7 +4,6 @@ import Collapsible from 'react-collapsible';
 import { Link } from 'react-router-dom';
 import db_genre from '../Data/db_genre.json'
 import Footer from './footer';
-import Header from './header';
 
 
 const Home = () => {
@@ -179,9 +178,11 @@ const Home = () => {
                                                         item.genre_ids.map((genre) => {
                                                             let result
                                                             let arr
+
                                                             arr = genreArr.filter(res => res.id === genre)
                                                             arr[0] === undefined ? result = "Arthouse" : result = arr[0].name
                                                             genreString += result + ", "
+
                                                         }))}
 
                                                     {item.release_date && (
