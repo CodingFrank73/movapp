@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Anton';
+    src: url(../../public/fonts/Anton/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url(../../public/fonts/Roboto/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../../public/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'RockSalt';
+    src: url(../../public/fonts/Rock_Salt/RockSalt-Regular.ttf);
+}
+@font-face {
+    font-family: 'JL';
+    src: url(../../public/fonts/JUSTICE\ LEAGUE.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #fff;
+    font-family: 'Roboto-Thin';
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}

@@ -1,0 +1,225 @@
+{
+    "details": [
+        {
+            "adult": false,
+            "backdrop_path": "/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
+            "belongs_to_collection": {
+                "id": 531241,
+                "name": "Spider-Man (Avengers) Filmreihe",
+                "poster_path": "/nogV4th2P5QWYvQIMiWHj4CFLU9.jpg",
+                "backdrop_path": "/AvnqpRwlEaYNVL6wzC4RN94EdSd.jpg"
+            },
+            "budget": 200000000,
+            "genres": [
+                {
+                    "id": 28,
+                    "name": "Action"
+                },
+                {
+                    "id": 12,
+                    "name": "Abenteuer"
+                },
+                {
+                    "id": 878,
+                    "name": "Science Fiction"
+                }
+            ],
+            "homepage": "https://www.sonypictures.de/film/spider-man-no-way-home",
+            "id": 634649,
+            "imdb_id": "tt10872600",
+            "original_language": "en",
+            "original_title": "Spider-Man: No Way Home",
+            "overview": "Peter Parker ist demaskiert und kann sein normales Leben nicht mehr von den hohen Einsätzen als Superheld trennen. Als er Doctor Strange um Hilfe bittet, wird die Lage noch gefährlicher und er muss entdecken, was es wirklich bedeutet, Spider-Man zu sein.",
+            "popularity": 13287.383,
+            "poster_path": "/iNKf4D0AzOj9GLq8ZyG3WZaqibL.jpg",
+            "production_companies": [
+                {
+                    "id": 420,
+                    "logo_path": "/hUzeosd33nzE5MCNsZxCGEKTXaQ.png",
+                    "name": "Marvel Studios",
+                    "origin_country": "US"
+                },
+                {
+                    "id": 84041,
+                    "logo_path": "/nw4kyc29QRpNtFbdsBHkRSFavvt.png",
+                    "name": "Pascal Pictures",
+                    "origin_country": "US"
+                },
+                {
+                    "id": 5,
+                    "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+                    "name": "Columbia Pictures",
+                    "origin_country": "US"
+                }
+            ],
+            "production_countries": [
+                {
+                    "iso_3166_1": "US",
+                    "name": "United States of America"
+                }
+            ],
+            "release_date": "2021-12-15",
+            "revenue": 1876685954,
+            "runtime": 159,
+            "spoken_languages": [
+                {
+                    "english_name": "English",
+                    "iso_639_1": "en",
+                    "name": "English"
+                },
+                {
+                    "english_name": "Tagalog",
+                    "iso_639_1": "tl",
+                    "name": ""
+                }
+            ],
+            "status": "Released",
+            "tagline": "Das entfesselte Multiversum!",
+            "title": "Spider-Man: No Way Home",
+            "video": false,
+            "vote_average": 8.3,
+            "vote_count": 9600
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5P8SmMzSNYikXpxil6BYzJ16611.jpg",
+            "belongs_to_collection": {
+                "id": 948485,
+                "name": "The Batman Collection",
+                "poster_path": null,
+                "backdrop_path": null
+            },
+            "budget": 185000000,
+            "genres": [
+                {
+                    "id": 80,
+                    "name": "Krimi"
+                },
+                {
+                    "id": 9648,
+                    "name": "Mystery"
+                },
+                {
+                    "id": 53,
+                    "name": "Thriller"
+                }
+            ],
+            "homepage": "https://www.thebatman.com",
+            "id": 414906,
+            "imdb_id": "tt1877830",
+            "original_language": "en",
+            "original_title": "The Batman",
+            "overview": "In seinem zweiten Jahr der Verbrechensbekämpfung deckt Batman Korruption in Gotham City auf, die mit seiner eigenen Familie in Verbindung steht, während er einem Serienmörder, der als Riddler bekannt ist, gegenübersteht.",
+            "popularity": 3256.924,
+            "poster_path": "/6zm78OqO4jWCpuaZ7q6Mb5j1beM.jpg",
+            "production_companies": [
+                {
+                    "id": 101405,
+                    "logo_path": null,
+                    "name": "6th & Idaho",
+                    "origin_country": "US"
+                },
+                {
+                    "id": 119245,
+                    "logo_path": null,
+                    "name": "Dylan Clark Productions",
+                    "origin_country": "US"
+                },
+                {
+                    "id": 128064,
+                    "logo_path": "/13F3Jf7EFAcREU0xzZqJnVnyGXu.png",
+                    "name": "DC Films",
+                    "origin_country": "US"
+                },
+                {
+                    "id": 174,
+                    "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
+                    "name": "Warner Bros. Pictures",
+                    "origin_country": "US"
+                }
+            ],
+            "production_countries": [
+                {
+                    "iso_3166_1": "US",
+                    "name": "United States of America"
+                }
+            ],
+            "release_date": "2022-03-01",
+            "revenue": 463220826,
+            "runtime": 176,
+            "spoken_languages": [
+                {
+                    "english_name": "English",
+                    "iso_639_1": "en",
+                    "name": "English"
+                }
+            ],
+            "status": "Released",
+            "tagline": "Die Masken werden fallen",
+            "title": "The Batman",
+            "video": false,
+            "vote_average": 8,
+            "vote_count": 1797
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tAztR7AXEesMQAAi5ncFPSZtYlI.jpg",
+            "belongs_to_collection": null,
+            "budget": 0,
+            "genres": [
+                {
+                    "id": 27,
+                    "name": "Horror"
+                },
+                {
+                    "id": 53,
+                    "name": "Thriller"
+                }
+            ],
+            "homepage": "https://www.hulu.com/movie/no-exit-4800d468-b587-44de-bad8-2646588bfa6b",
+            "id": 833425,
+            "imdb_id": "tt7550014",
+            "original_language": "en",
+            "original_title": "No Exit",
+            "overview": "In dem Thriller wird Darby Thorne, eine junge Frau, die auf dem Weg zu ihrer Familie ist, von einem Schneesturm aufgehalten und muss mit einer Gruppe von Fremden auf einem Highway-Rastplatz Schutz suchen. Als sie in einem Transporter ein entführtes Mädchen entdeckt, beginnt für sie ein Kampf um Leben und Tod, bei dem sie den Entführer finden muss.",
+            "popularity": 2539.505,
+            "poster_path": "/yGCwZwuAYWrKobmlHEIQ1OGbGiI.jpg",
+            "production_companies": [
+                {
+                    "id": 127928,
+                    "logo_path": "/h0rjX5vjW5r8yEnUBStFarjcLT4.png",
+                    "name": "20th Century Studios",
+                    "origin_country": "US"
+                },
+                {
+                    "id": 109793,
+                    "logo_path": null,
+                    "name": "Flitcraft",
+                    "origin_country": "US"
+                }
+            ],
+            "production_countries": [
+                {
+                    "iso_3166_1": "US",
+                    "name": "United States of America"
+                }
+            ],
+            "release_date": "2022-02-25",
+            "revenue": 0,
+            "runtime": 95,
+            "spoken_languages": [
+                {
+                    "english_name": "English",
+                    "iso_639_1": "en",
+                    "name": "English"
+                }
+            ],
+            "status": "Released",
+            "tagline": "Wie weit würdest du gehen?",
+            "title": "No Exit",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 215
+        }
+    ]
+}

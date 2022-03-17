@@ -1,0 +1,29 @@
+{
+    "id": 634649,
+    "results": [
+        {
+            "iso_639_1": "de",
+            "iso_3166_1": "DE",
+            "name": "Spider-Man: No Way Home – Offizieller Trailer (deutsch HD)",
+            "key": "X5ibkB5ftH0",
+            "site": "YouTube",
+            "size": 1080,
+            "type": "Trailer",
+            "official": true,
+            "published_at": "2021-11-17T08:20:28.000Z",
+            "id": "6194cd08d768fe0062d9a90d"
+        },
+        {
+            "iso_639_1": "de",
+            "iso_3166_1": "DE",
+            "name": "Spider-Man: No Way Home – Trailer A (deutsch HD)",
+            "key": "HNc3QiYtPwI",
+            "site": "YouTube",
+            "size": 1080,
+            "type": "Trailer",
+            "official": true,
+            "published_at": "2021-08-24T02:03:32.000Z",
+            "id": "6124955bd6c30000469de42a"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+// mixin
+
+@mixin flexit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin styletext($fz, $fw, $co, $td, $tt, $bg){
+    font-size: $fz;
+    font-weight: $fw;
+    color: $co;
+    text-decoration: $td;
+    text-transform: $tt;
+    background: $bg;
+}

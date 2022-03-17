@@ -1,0 +1,520 @@
+@font-face {
+  font-family: "Anton";
+  src: url(../../public/fonts/Anton/Anton-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url(../../public/fonts/Roboto/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../../public/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "RockSalt";
+  src: url(../../public/fonts/Rock_Salt/RockSalt-Regular.ttf);
+}
+@font-face {
+  font-family: "JL";
+  src: url(../../public/fonts/JUSTICE\ LEAGUE.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Roboto-Thin";
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background: #1A2634;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: fixed;
+  z-index: 2;
+}
+header h1 {
+  font-family: "Anton";
+  font-size: 3rem;
+  font-weight: 100;
+  color: #fff;
+  margin: 24px 0 0 8%;
+}
+header h1 b {
+  color: #21E18C;
+}
+header h1:hover b {
+  color: #fff;
+}
+header h1:hover a {
+  color: #21E18C;
+}
+header .searchbar {
+  margin: 0px auto 1rem auto;
+  width: 335px;
+  background: #24323f;
+  border-radius: 25px;
+}
+header .searchbar button {
+  border: none;
+  background-color: #24323f;
+  font-size: 1.3rem;
+  border-radius: 25px;
+  margin: 8px 0 0 8px;
+}
+header .searchbar input {
+  border: none;
+  background-color: #24323f;
+  font-size: 1.3rem;
+  color: #DEDEDE;
+  width: 255px;
+  padding: 3px 0 2px 24px;
+  margin: 14px 0 15px 8px;
+}
+header .searchbar .fa-magnifying-glass {
+  color: #21E18C;
+  font-size: 1.5rem;
+}
+
+main {
+  background: #24323f;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+main section {
+  padding-top: 180px;
+}
+main section article {
+  padding: 1rem 8%;
+}
+main section article h2 {
+  font-family: "Anton";
+  font-size: 2.6rem;
+  font-weight: 100;
+  margin-bottom: 3%;
+}
+main section article h2 b {
+  color: #21E18C;
+}
+main .movPoster {
+  position: relative;
+}
+main .movRating {
+  display: inline-block;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #21E18C;
+  z-index: 1;
+  text-align: center;
+  padding: 8px 0 0 0;
+  margin: 0;
+}
+main .movList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 15%;
+}
+main figure p {
+  font-family: "Roboto-Thin";
+}
+main figure h3 {
+  font-family: "Anton";
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+footer {
+  background: #1A2634;
+  width: 100%;
+  margin: 0 auto;
+}
+footer article {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1rem 8%;
+}
+footer article .block {
+  display: flex;
+}
+footer article .block .links {
+  display: none;
+  text-align: left;
+  font-family: "Anton";
+  font-size: 3rem;
+  color: #fff;
+  margin: 1rem 0 1rem 0;
+}
+footer article .block .links b {
+  color: #21E18C;
+}
+footer article .block .links a:hover {
+  color: #21E18C;
+}
+footer article .block .links a:hover b {
+  color: #fff;
+}
+footer article .block .imprint {
+  font-family: "Roboto-Thin";
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+footer article .block .imprint a:hover {
+  border-bottom: 2px solid #21E18C;
+}
+footer article .mitte {
+  text-align: center;
+  color: #21E18C;
+  margin: 1.2rem auto 0 auto;
+}
+footer article .mitte .fa-brands {
+  font-size: 3.5rem;
+  color: #21E18C;
+  text-align: center;
+  padding: 0 0.8rem;
+}
+footer article .mitte a .fa-brands:hover {
+  color: #fff;
+}
+footer article .rechts a {
+  display: none;
+  font-size: 2rem;
+  font-family: "RockSalt";
+  color: #1A2634;
+  text-align: center;
+}
+footer article .rechts a .fa-solid {
+  font-size: 3rem;
+  padding: 0 0.5rem;
+}
+
+.urheber {
+  font-size: 0.8rem;
+  color: #CDCDCD;
+  text-align: right;
+  padding: 0.5rem 1rem 2rem 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 7%;
+  margin-bottom: 10%;
+}
+.details .poster {
+  width: 100%;
+}
+.details .infos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.details .infos .hlDetails {
+  font-family: "Anton";
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.details .infos .infoDetails {
+  font-family: "Roboto-Regular";
+  font-size: 1.6rem;
+  padding: 4px 0 0 0;
+}
+.details .infos .trailer {
+  grid-column: 1/3;
+  font-family: "Anton";
+  font-size: 1.5rem;
+  align-items: start;
+}
+.details .infos .trailer iframe {
+  width: 95%;
+}
+
+.imPrint {
+  padding-top: 130px;
+}
+
+.desktop {
+  display: none;
+}
+
+.smartphne {
+  width: 100%;
+}
+
+.headLine {
+  font-family: "Anton";
+  font-size: 1rem;
+}
+
+.superhelden {
+  background: #1a2634;
+  display: grid;
+  grid-template-columns: 20% 20% 60%;
+  gap: 1rem;
+}
+.superhelden .heldName {
+  font-family: "JL";
+  font-size: 1rem;
+  padding-top: 4px;
+}
+.superhelden .heldID {
+  font-family: "Anton";
+  font-size: 1rem;
+}
+.superhelden .heldSkills {
+  font-family: "Roboto-Regular";
+  font-size: 1rem;
+}
+
+.technik {
+  padding-bottom: 4%;
+}
+.technik h2 {
+  font-size: 1.8rem;
+  font-weight: 100;
+  width: 80%;
+}
+.technik .toolListe {
+  display: grid;
+  grid-template-columns: repeat(8, fr);
+  gap: 2rem;
+  align-items: center;
+}
+.technik div:nth-of-type(1) {
+  grid-column: 1/2;
+}
+.technik div:nth-of-type(2) {
+  grid-column: 2/3;
+}
+.technik div:nth-of-type(3) {
+  grid-column: 3/4;
+}
+.technik div:nth-of-type(4) {
+  grid-column: 4/5;
+}
+.technik div:nth-of-type(5) {
+  grid-column: 5/6;
+}
+.technik div:nth-of-type(6) {
+  grid-column: 6/7;
+}
+.technik div:nth-of-type(7) {
+  grid-column: 7/8;
+}
+.technik div:nth-of-type(8) {
+  grid-column: 8/9;
+}
+
+@media screen and (min-width: 481px) {
+  main .movList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 15%;
+  }
+
+  .details .infos .trailer iframe {
+    width: 70%;
+    height: 260px;
+  }
+}
+@media screen and (min-width: 769px) {
+  header h1 {
+    margin: 34px 0 35px 8%;
+  }
+  header .searchbar {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  header .searchbar button {
+    border: none;
+    background-color: #24323f;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    margin: 8px 0 0 8px;
+  }
+  header .searchbar input {
+    border: none;
+    background-color: #24323f;
+    font-size: 1.3rem;
+    color: #DEDEDE;
+    width: 255px;
+    padding: 3px 0 2px 24px;
+    margin: 14px 0 15px 8px;
+  }
+  header .searchbar .fa-magnifying-glass {
+    color: #21E18C;
+    font-size: 1.5rem;
+  }
+
+  main .movList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 15%;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+    margin-bottom: 10%;
+  }
+  .details .poster {
+    width: 40%;
+  }
+  .details .infos {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin: 0;
+    padding: 0;
+  }
+  .details .infos .hlDetails {
+    font-family: "Anton";
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+  }
+  .details .infos .infoDetails {
+    font-family: "Roboto-Regular";
+    font-size: 2rem;
+    padding: 4px 0 0 0;
+  }
+  .details .infos .trailer {
+    grid-column: 1/3;
+    font-family: "Anton";
+    font-size: 2rem;
+    align-items: start;
+  }
+  .details .infos .trailer iframe {
+    width: 100%;
+    height: 230px;
+  }
+
+  .desktop {
+    display: initial;
+    width: 100%;
+  }
+
+  .smartphone {
+    display: none;
+  }
+}
+@media screen and (min-width: 840px) {
+  .details .infos .trailer iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  footer article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 8%;
+  }
+  footer article .block {
+    display: flex;
+  }
+  footer article .block .links {
+    display: initial;
+    text-align: left;
+    font-family: "Anton";
+    font-size: 3rem;
+    color: #fff;
+    margin: 1rem 0 1rem 0;
+  }
+  footer article .block .links b {
+    color: #21E18C;
+  }
+  footer article .block .links a:hover {
+    color: #21E18C;
+  }
+  footer article .block .links a:hover b {
+    color: #fff;
+  }
+  footer article .block .imprint {
+    font-family: "Roboto-Thin";
+    font-size: 1.5rem;
+    align-items: center;
+    padding: 2.5rem 0.5rem 0rem 3.5rem;
+  }
+  footer article .block .imprint a:hover {
+    border-bottom: 2px solid #21E18C;
+  }
+  footer article .rechts a {
+    display: initial;
+    font-size: 1rem;
+  }
+  footer article .rechts a .fa-solid {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .movList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 15%;
+  }
+}
+@media screen and (min-width: 1261px) {
+  main .movList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-bottom: 15%;
+  }
+
+  .details .infos .trailer iframe {
+    width: 70%;
+    height: 270px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  header {
+    width: 80%;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  footer {
+    width: 80%;
+  }
+
+  .urheber {
+    font-size: 0.6rem;
+    padding: 0.5rem 10% 2rem 0;
+  }
+}/*# sourceMappingURL=main.css.map */
