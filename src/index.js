@@ -12,6 +12,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="movieDetail/:id" element={<MovieDetail />} />
+        <Route path="/imprint.html" />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>,

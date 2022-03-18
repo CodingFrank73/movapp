@@ -18,6 +18,10 @@
   font-family: "JL";
   src: url(../../public/fonts/JUSTICE\ LEAGUE.ttf);
 }
+@font-face {
+  font-family: "breezi";
+  src: url(../../public/fonts/breezi_font-webfont.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +41,44 @@ a {
 
 img {
   width: 100%;
+}
+
+.Collapsible {
+  font-family: "breezi";
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  background: #1A2634;
+  border-radius: 4px;
+  padding: 4px 10px 8px 8px;
+  cursor: pointer;
+  width: 180px;
+}
+
+.Collapsible__contentInner {
+  font-family: "Anton";
+  font-family: "Roboto-Regular";
+  font-size: 1rem;
+  font-weight: 100;
+  text-align: left;
+  background: #24323f;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-radius: 8px;
+}
+.Collapsible__contentInner ul {
+  list-style: none;
+}
+.Collapsible__contentInner ul li {
+  padding: 0.5rem 1rem;
+}
+.Collapsible__contentInner lable {
+  display: block;
+  padding-bottom: 3rem;
 }
 
 header {
@@ -119,6 +161,7 @@ main .movPoster {
   position: relative;
 }
 main .movRating {
+  font-family: "Roboto-Regular";
   display: inline-block;
   position: absolute;
   top: 3%;
