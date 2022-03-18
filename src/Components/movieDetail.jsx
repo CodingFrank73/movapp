@@ -5,15 +5,23 @@ import Footer from "./footer";
 
 const MovieDetail = () => {
 
+    let trailerKey = "";
+    let genreString = "";
+
     const { id } = useParams();
     const { data: movie, error, isPending } = useFetch(`https://api.themoviedb.org/3/movie/${id}?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
 
+    // const { data: trailer, errorTrailer, isPendingTrailer } = useFetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
 
-    const { data: trailer, errorTrailer, isPendingTrailer } = useFetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
+    const { data: trailer } = useFetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
 
+    movie && (movie.genres.map((genreName) => {
+        return (
+            genreString += genreName.name + ", "
+        )
+    }))
 
-    let genreString = "";
-    let trailerKey = "";
+    trailer && (trailerKey = trailer.results[0].key)
 
     return (
         <div className="movie">
@@ -46,11 +54,6 @@ const MovieDetail = () => {
                                     <div class="hlDetails">Release Date</div>
                                     <div class="infoDetails">{movie.release_date}</div>
 
-                                    {movie.genres.map((genreName) => {
-                                        genreString += genreName.name + ", "
-                                        return
-                                    })}
-
                                     <div class="hlDetails">Genres</div>
                                     <div class="infoDetails">{(genreString.substring(0, genreString.length - 2))}</div>
 
@@ -63,15 +66,6 @@ const MovieDetail = () => {
                                     <div className="trailer">
                                         <p>Watch Trailer</p>
 
-                                        {isPendingTrailer && <div>Loading...</div>}
-                                        {errorTrailer && <div>{error}</div>}
-                                        {trailer && (
-                                            trailer.results.map((element, i) => {
-                                                i === 0 && (trailerKey = element.key)
-                                                return
-                                            })
-                                        )}
-
                                         <iframe src={`https://www.youtube.com/embed/${trailerKey}`} title=".MOV Videoplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen></iframe>
                                     </div>
@@ -79,7 +73,7 @@ const MovieDetail = () => {
                             </div>
                         </article>
                     </section>
-                </main>
+                </main >
             )
             }
 

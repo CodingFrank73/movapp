@@ -139,7 +139,8 @@ const Home = () => {
 
 
             <header>
-                <h1><a href="#"><b>.</b>MOV </a></h1>
+
+                <h1> <Link to={-1}><b>.</b>MOV</Link></h1>
                 <div className="searchbar">
                     <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
                     <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && handleSearch(e.target.value)} />
