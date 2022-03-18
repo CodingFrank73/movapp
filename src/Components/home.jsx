@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import useFetch from "./useFetch";
 import Collapsible from 'react-collapsible';
 import { Link } from 'react-router-dom';
 import db_genre from '../Data/db_genre.json'
@@ -16,6 +17,7 @@ const Home = () => {
     const [genreId, setGenreId] = useState("")
     const [filter, setFilter] = useState(false)
     const [defaultScreen, setDefaultScreen] = useState(false)
+
 
     useEffect(() => {
         const cleanUp = new AbortController();
@@ -42,6 +44,7 @@ const Home = () => {
                     setError(err.message);
                 }
             })
+
         setDefaultScreen(false)
         return () => cleanUp.abort();
 
@@ -134,12 +137,12 @@ const Home = () => {
 
     }, [filter]);
 
+
+
     return (
         <div className="movieList">
 
-
             <header>
-
                 <h1> <Link to={-1}><b>.</b>MOV</Link></h1>
                 <div className="searchbar">
                     <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
@@ -170,22 +173,21 @@ const Home = () => {
 
                                     let genreString = "";
 
+                                    item.genre_ids && (
+                                        item.genre_ids.map((genre) => {
+                                            let arr = genreArr.filter(res => res.id === genre)
+                                            arr[0] === undefined ? genreString += ("Arthouse" + ", ") : genreString += (arr[0].name + ", ")
+                                            return (genreString)
+                                        }))
+
                                     return (
-                                        <figure id="popMov0" class="movPoster">
+
+                                        <figure id="popMov0" className="movPoster">
                                             <Link to={`moviedetail/${item.id}`}>
-                                                <div class="movRating">{item.vote_average}</div>
+                                                <div className="movRating">{item.vote_average}</div>
                                                 <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="bild" />
+
                                                 <figcaption>
-
-                                                    {item.genre_ids && (
-                                                        item.genre_ids.map((genre) => {
-                                                            let result
-                                                            let arr = genreArr.filter(res => res.id === genre)
-                                                            arr[0] === undefined ? result = "Arthouse" : result = arr[0].name
-                                                            genreString += result + ", "
-                                                            return
-                                                        }))}
-
                                                     {item.release_date && (
                                                         <p>{item.release_date.slice(0, 4) + " - " + genreString.substring(0, genreString.length - 2)}</p>
                                                     )}

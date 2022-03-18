@@ -11,8 +11,6 @@ const MovieDetail = () => {
     const { id } = useParams();
     const { data: movie, error, isPending } = useFetch(`https://api.themoviedb.org/3/movie/${id}?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
 
-    // const { data: trailer, errorTrailer, isPendingTrailer } = useFetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
-
     const { data: trailer } = useFetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
 
     movie && (movie.genres.map((genreName) => {
@@ -37,7 +35,6 @@ const MovieDetail = () => {
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {movie && (
-
                 <main>
                     <section>
                         <article>
@@ -51,32 +48,30 @@ const MovieDetail = () => {
 
                                 <div className="infos">
 
-                                    <div class="hlDetails">Release Date</div>
-                                    <div class="infoDetails">{movie.release_date}</div>
+                                    <div className="hlDetails">Release Date</div>
+                                    <div className="infoDetails">{movie.release_date}</div>
 
-                                    <div class="hlDetails">Genres</div>
-                                    <div class="infoDetails">{(genreString.substring(0, genreString.length - 2))}</div>
+                                    <div className="hlDetails">Genres</div>
+                                    <div className="infoDetails">{(genreString.substring(0, genreString.length - 2))}</div>
 
-                                    <div class="hlDetails">Overview</div>
-                                    <div class="infoDetails">{movie.overview}</div>
+                                    <div className="hlDetails">Overview</div>
+                                    <div className="infoDetails">{movie.overview}</div>
 
-                                    <div class="hlDetails">Average Voting</div>
-                                    <div class="infoDetails">{movie.vote_average}</div>
+                                    <div className="hlDetails">Average Voting</div>
+                                    <div className="infoDetails">{movie.vote_average}</div>
 
                                     <div className="trailer">
                                         <p>Watch Trailer</p>
 
-                                        <iframe src={`https://www.youtube.com/embed/${trailerKey}`} title=".MOV Videoplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
+                                        <iframe src={`https://www.youtube.com/embed/${trailerKey}`} title=".MOV Videoplayer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen></iframe>
                                     </div>
                                 </div>
                             </div>
                         </article>
                     </section>
                 </main >
-            )
-            }
-
+            )}
             <Footer />
         </div >
     );
