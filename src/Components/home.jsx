@@ -91,7 +91,6 @@ const Home = () => {
             setValueArr(valueArr => [...valueArr, e.value])
         }
         else {
-            // let a =
             valueArr.splice(valueArr.indexOf(e.value, 0), 1)
             setGenreId(valueArr.join())
 
@@ -134,7 +133,7 @@ const Home = () => {
         setFilter(false)
         return () => cleanUp.abort();
 
-    }, [filter]);
+    }, [genreId]);
 
 
 
