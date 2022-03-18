@@ -14,7 +14,6 @@ const Home = () => {
     const [error, setError] = useState(null)
     const [valueArr, setValueArr] = useState([])
     const [genreId, setGenreId] = useState("")
-    // const [filter, setFilter] = useState(false)
     const [defaultScreen, setDefaultScreen] = useState(false)
 
 
@@ -97,8 +96,6 @@ const Home = () => {
             //Wenn keine Checkbox ausgewählt ist, lade Startseite erneut
             if (valueArr.length === 0) { setDefaultScreen(true) }
         }
-
-        // setFilter(true)
     }
 
     useEffect(() => {
@@ -130,12 +127,9 @@ const Home = () => {
                 })
         )
 
-        // setFilter(false)
         return () => cleanUp.abort();
 
     }, [genreId]);
-
-
 
     return (
         <div className="movieList">
@@ -179,10 +173,7 @@ const Home = () => {
                                             return (genreString)
                                         }))
 
-
                                     item.poster_path === null ? picString = "/img/not_avaible.png" : picString = `https://image.tmdb.org/t/p/w500${item.poster_path}`
-
-
 
                                     return (
 

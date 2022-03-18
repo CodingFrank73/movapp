@@ -7,6 +7,7 @@ const MovieDetail = () => {
 
     let trailerKey = "";
     let genreString = "";
+    let picString = "";
 
     const { id } = useParams();
     const { data: movie, error, isPending } = useFetch(`https://api.themoviedb.org/3/movie/${id}?api_key=b48ee67edfa90490c5c00809b96d895b&language=en-US`)
@@ -19,7 +20,13 @@ const MovieDetail = () => {
         )
     }))
 
-    trailer && (trailerKey = trailer.results[0].key)
+    trailer && (
+        trailer.results.length > 0 ? trailerKey = trailer.results[0].key : trailerKey = ""
+    )
+
+    movie && (
+        movie.poster_path === null ? picString = "/img/not_avaible.png" : picString = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+    )
 
     return (
         <div className="movie">
@@ -35,7 +42,7 @@ const MovieDetail = () => {
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {movie && (
-                <main>
+                < main >
                     <section>
                         <article>
                             <h2>{movie.title}</h2>
@@ -43,7 +50,7 @@ const MovieDetail = () => {
                             <div className="details" key={movie.id}>
 
                                 <div className="poster">
-                                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="bild" />
+                                    <img src={picString} alt="bild" />
                                 </div>
 
                                 <div className="infos">
@@ -71,7 +78,8 @@ const MovieDetail = () => {
                         </article>
                     </section>
                 </main >
-            )}
+            )
+            }
             <Footer />
         </div >
     );
