@@ -170,6 +170,7 @@ const Home = () => {
                                 movies.map((item, i) => {
 
                                     let genreString = "";
+                                    let picString = "";
 
                                     item.genre_ids && (
                                         item.genre_ids.map((genre) => {
@@ -178,12 +179,17 @@ const Home = () => {
                                             return (genreString)
                                         }))
 
+
+                                    item.poster_path === null ? picString = "/img/not_avaible.png" : picString = `https://image.tmdb.org/t/p/w500${item.poster_path}`
+
+
+
                                     return (
 
                                         <figure id="popMov0" className="movPoster">
                                             <Link to={`moviedetail/${item.id}`}>
                                                 <div className="movRating">{item.vote_average}</div>
-                                                <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="bild" />
+                                                <img src={picString} alt="bild" />
 
                                                 <figcaption>
                                                     {item.release_date && (
