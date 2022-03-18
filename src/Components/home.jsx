@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import useFetch from "./useFetch";
 import Collapsible from 'react-collapsible';
 import { Link } from 'react-router-dom';
 import db_genre from '../Data/db_genre.json'
@@ -176,7 +175,7 @@ const Home = () => {
                                     item.genre_ids && (
                                         item.genre_ids.map((genre) => {
                                             let arr = genreArr.filter(res => res.id === genre)
-                                            arr[0] === undefined ? genreString += ("Arthouse" + ", ") : genreString += (arr[0].name + ", ")
+                                            arr[0] === undefined ? genreString += "Arthouse," : genreString += `${arr[0].name}, `
                                             return (genreString)
                                         }))
 
