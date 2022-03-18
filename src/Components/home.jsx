@@ -14,7 +14,7 @@ const Home = () => {
     const [error, setError] = useState(null)
     const [valueArr, setValueArr] = useState([])
     const [genreId, setGenreId] = useState("")
-    const [filter, setFilter] = useState(false)
+    // const [filter, setFilter] = useState(false)
     const [defaultScreen, setDefaultScreen] = useState(false)
 
 
@@ -98,7 +98,7 @@ const Home = () => {
             if (valueArr.length === 0) { setDefaultScreen(true) }
         }
 
-        setFilter(true)
+        // setFilter(true)
     }
 
     useEffect(() => {
@@ -130,7 +130,7 @@ const Home = () => {
                 })
         )
 
-        setFilter(false)
+        // setFilter(false)
         return () => cleanUp.abort();
 
     }, [genreId]);
