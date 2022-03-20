@@ -1,5 +1,5 @@
 
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import useFetch from "./useFetch";
 import Footer from "./footer";
 
@@ -8,8 +8,6 @@ const MovieDetail = () => {
     let trailerKey = "";
     let genreString = "";
     let picString = "";
-
-    const navigate = useNavigate()
 
     const { id } = useParams();
     const { data: movie, error, isPending } = useFetch(`https://api.themoviedb.org/3/movie/${id}?api_key=b48ee67edfa90490c5c00809b96d895b&language=en-US`)

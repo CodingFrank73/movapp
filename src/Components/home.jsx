@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import Collapsible from 'react-collapsible';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Footer from './footer';
 import MovieList from './movieList';
 
@@ -39,6 +39,8 @@ const Home = () => {
                 setPageCheck((initial) => {
                     return initial + 1;
                 })
+            default:
+                break;
         }
     }
 
@@ -59,6 +61,8 @@ const Home = () => {
                 setPageCheck((initial) => {
                     return initial - 1;
                 })
+            default:
+                break;
         }
     }
 
