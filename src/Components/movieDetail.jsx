@@ -1,5 +1,5 @@
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import useFetch from "./useFetch";
 import Footer from "./footer";
 
@@ -8,6 +8,8 @@ const MovieDetail = () => {
     let trailerKey = "";
     let genreString = "";
     let picString = "";
+
+    const navigate = useNavigate()
 
     const { id } = useParams();
     const { data: movie, error, isPending } = useFetch(`https://api.themoviedb.org/3/movie/${id}?api_key=b48ee67edfa90490c5c00809b96d895b&language=en-US`)
@@ -32,53 +34,56 @@ const MovieDetail = () => {
         <div className="movie">
 
             <header>
-                <h1><Link to={-1}><b>.</b>MOV</Link></h1>
+                <h1><Link to="/"><b>.</b>MOV</Link></h1>
                 <div className="searchbar">
                     {/* <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" onKeyPress={(e) => e.key === 'Enter' && handleSearch(e.target.value)} /> */}
+                    <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && navigate('/', { state: "terminator" },)} /> */}
+                    {/* <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && <Link to="/" state={{ from: "test" }}></Link>} /> */}
+
                 </div>
             </header>
 
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {movie && (
-                < main >
-                    <section>
-                        <article>
-                            <h2>{movie.title}</h2>
+            {
+                movie && (
+                    < main >
+                        <section>
+                            <article>
+                                <h2>{movie.title}</h2>
 
-                            <div className="details" key={movie.id}>
+                                <div className="details" key={movie.id}>
 
-                                <div className="poster">
-                                    <img src={picString} alt="bild" />
-                                </div>
+                                    <div className="poster">
+                                        <img src={picString} alt="bild" />
+                                    </div>
 
-                                <div className="infos">
+                                    <div className="infos">
 
-                                    <div className="hlDetails">Release Date</div>
-                                    <div className="infoDetails">{movie.release_date}</div>
+                                        <div className="hlDetails">Release Date</div>
+                                        <div className="infoDetails">{movie.release_date}</div>
 
-                                    <div className="hlDetails">Genres</div>
-                                    <div className="infoDetails">{(genreString.substring(0, genreString.length - 2))}</div>
+                                        <div className="hlDetails">Genres</div>
+                                        <div className="infoDetails">{(genreString.substring(0, genreString.length - 2))}</div>
 
-                                    <div className="hlDetails">Overview</div>
-                                    <div className="infoDetails">{movie.overview}</div>
+                                        <div className="hlDetails">Overview</div>
+                                        <div className="infoDetails">{movie.overview}</div>
 
-                                    <div className="hlDetails">Average Voting</div>
-                                    <div className="infoDetails">{movie.vote_average}</div>
+                                        <div className="hlDetails">Average Voting</div>
+                                        <div className="infoDetails">{movie.vote_average}</div>
 
-                                    <div className="trailer">
-                                        <p>Watch Trailer</p>
+                                        <div className="trailer">
+                                            <p>Watch Trailer</p>
 
-                                        <iframe src={`https://www.youtube.com/embed/${trailerKey}`} title=".MOV Videoplayer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen></iframe>
+                                            <iframe src={`https://www.youtube.com/embed/${trailerKey}`} title=".MOV Videoplayer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen></iframe>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
-                    </section>
-                </main >
-            )
+                            </article>
+                        </section>
+                    </main >
+                )
             }
             <Footer />
         </div >
