@@ -5,6 +5,7 @@ import db_genre from '../Data/db_genre.json'
 
 const MovieList = ({ movies, fetchNumber, handlePageUp, handlePageDown }) => {
     const [genreArr] = useState(db_genre.genres);
+    // const [title, setTitle] = useState('')
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -17,7 +18,10 @@ const MovieList = ({ movies, fetchNumber, handlePageUp, handlePageDown }) => {
         <main>
             <section>
                 <article>
-                    <h2>Popular movies</h2>
+
+                    {fetchNumber !== 1 ? <h2>Result</h2> : <h2>Popular movies</h2>}
+                    {/* <h2>Popular movies</h2> */}
+
                     <div className="movList">
                         {movies && (
                             movies.map((item, i) => {
@@ -35,7 +39,7 @@ const MovieList = ({ movies, fetchNumber, handlePageUp, handlePageDown }) => {
                                 item.poster_path === null ? picString = "/img/not_avaible.png" : picString = `https://image.tmdb.org/t/p/w500${item.poster_path}`
 
                                 return (
-                                    <figure id="popMov0" className="movPoster">
+                                    <figure id="popMov0" className="movPoster" key={item.id}>
                                         <Link to={`/moviedetail/${item.id}`}>
                                             <div className="movRating">{item.vote_average}</div>
                                             <img src={picString} alt="bild" />

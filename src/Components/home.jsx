@@ -139,7 +139,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        console.log(valueArr)
+        // console.log(valueArr)
         setGenreId(valueArr.join())
     }, [valueArr]);
 
@@ -194,7 +194,7 @@ const Home = () => {
         <div className="movieList">
 
             <header>
-                <h1> <Link to={-1}><b>.</b>MOV</Link></h1>
+                <h1> <Link to="/"><b>.</b>MOV</Link></h1>
                 <div className="searchbar">
                     <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
                     <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && setSearchValue(e.target.value)} />

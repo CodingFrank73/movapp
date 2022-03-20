@@ -2,6 +2,9 @@
 @import "_variables.scss";
 @import "_mixin.scss";
 
+
+
+
 .Collapsible{
     font-family: 'breezi';
     font-size: 2rem;
@@ -11,7 +14,7 @@
     text-align: right;
     background: #1A2634;
     border-radius: 4px;
-    padding: 4px 10px 8px 8px;
+    padding: 6px 8px 8px 8px;
     cursor: pointer;
     width: 180px;
  }
@@ -28,7 +31,7 @@
     cursor: pointer;
     padding-bottom: 10px;
     border-radius: 8px;
-   
+
     ul{
         list-style: none;
         li{
@@ -146,6 +149,7 @@ main{
             }
                 .movRating{
                     font-family: 'Roboto-Regular';
+                    
                     display: inline-block;
                     position: absolute;
                     top: 3%;
@@ -312,6 +316,8 @@ main{
 }
 
 
+
+
 //  -------------------------------
 //              IMPRINT
 //  -------------------------------
@@ -334,6 +340,7 @@ main{
     grid-template-columns: 20% 20% 60%;
     gap: 1rem;
     
+    
     .heldName{
     font-family: 'JL';
     font-size: 1rem;
@@ -342,6 +349,7 @@ main{
     .heldID{
         font-family: 'Anton';
         font-size: 1rem;
+
     }
     .heldSkills{
         font-family: 'Roboto-Regular';
@@ -363,30 +371,7 @@ main{
             gap:2rem;
             align-items: center;
         }
-        div:nth-of-type(1){
-            grid-column: 1/2;
-        }
-        div:nth-of-type(2){
-            grid-column: 2/3;
-        }
-        div:nth-of-type(3){
-            grid-column: 3/4;
-        }
-        div:nth-of-type(4){
-            grid-column: 4/5;
-        }
-        div:nth-of-type(5){
-            grid-column: 5/6;
-        }
-        div:nth-of-type(6){
-            grid-column: 6/7;
-        }
-        div:nth-of-type(7){
-            grid-column: 7/8;
-        }
-        div:nth-of-type(8){
-            grid-column: 8/9;
-        }
+
 }
 
 
@@ -593,17 +578,14 @@ main{
 
 
     @media screen and (min-width:1441px){
-        header{
-            width: 80%;
+        header, main, footer{
+            width: 1440px;
         }
-        main{
-            width: 80%;
-        }
-        footer{
-            width: 80%;
-        }
+    
         .urheber{
             font-size: 0.6rem;
-            padding: 0.5rem 10% 2rem 0;
+            padding: 0.5rem 0 2rem 0;
+            width: 1440px;
+            // text-align: right;
         }
     }

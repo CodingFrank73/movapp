@@ -1,13 +1,18 @@
+import { Link } from 'react-router-dom'
+import Footer from "./footer";
+
 const Imprint = () => {
     return (
         <div>
             <header>
-                <h1><a href="../../index.html"><b>.</b>MOV </a></h1>
+                <h1><Link to={-1}><b>.</b>MOV </Link></h1>
             </header>
-            {/* <main>
+
+
+            <main>
                 <section className="imPrint">
                     <img src="../img/imprint_monochrome.png" alt="Die Crew" className="desktop"></img>
-                    <img src="../img/mobile_imprint_color.png" alt="Die Crew" className="smartphone"> </img>
+                    <img src="../img/mobile_imprint_color.png" alt="Die Crew" className="smartphone"></img>
 
                     <article className="superhelden">
                         <div className="headLine">Name</div>
@@ -54,8 +59,9 @@ const Imprint = () => {
                         </div>
                     </article>
                 </section>
-            </main> */}
+            </main>
 
+            <Footer />
             {/* <footer>
                 <article>
                     <div className="block">
@@ -77,13 +83,13 @@ const Imprint = () => {
                         </a>
                     </div>
                 </article>
-            </footer> */}
+            </footer>
             <div className="urheber">
                 <p>&copy; 2022 by Justice League</p>
                 <p>Created with Love <i className="fa-solid fa-heart"></i>
                 </p>
                 <p><i className="fa-solid fa-carrot"></i> 1oo% vegan</p>
-            </div>
+            </div> */}
 
 
             {/* <script src="https://kit.fontawesome.com/8c93758a75.js" crossorigin="anonymous"></script>

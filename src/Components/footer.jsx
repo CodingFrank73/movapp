@@ -8,7 +8,7 @@ const Footer = () => {
                 <article>
                     <div className="block">
                         <div className="links"><Link to={-1}><b>.</b>MOV</Link></div>
-                        <div className="imprint"><a href="/imprint.html">Imprint</a></div>
+                        <div className="imprint"><Link to={"/imprint"}>Imprint</Link></div>
                     </div>
                     <div className="mitte">
                         <div>
@@ -31,7 +31,7 @@ const Footer = () => {
                 </p>
                 <p><i className="fa-solid fa-carrot"></i> 1oo% vegan</p>
             </div>
-        </div>
+        </div >
     )
 }
 
