@@ -39,6 +39,7 @@ const Home = () => {
                 setPageCheck((initial) => {
                     return initial + 1;
                 })
+                break;
             default:
                 break;
         }
@@ -61,6 +62,7 @@ const Home = () => {
                 setPageCheck((initial) => {
                     return initial - 1;
                 })
+                break;
             default:
                 break;
         }
@@ -83,7 +85,6 @@ const Home = () => {
                 setMovies(json.results)
                 setError(null)
                 setFetchNumber(1)
-                console.log(movies);
             })
 
             .catch(err => {
