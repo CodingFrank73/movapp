@@ -55,8 +55,10 @@ const MovieList = ({ movies, fetchNumber, handlePageUp, handlePageDown }) => {
                             }))
                         }
                     </div>
-                    <button onClick={() => [handlePageDown(fetchNumber), scrollToTop()]}><i className="fa-solid fa-square-minus"></i></button>
-                    <button onClick={() => [handlePageUp(fetchNumber), scrollToTop()]} > <i className="fa-solid fa-square-plus"></i></button>
+                    <div className="plusminus">
+                        <button onClick={() => [handlePageDown(fetchNumber), scrollToTop()]}><i className="fa-solid fa-square-minus"></i></button>
+                        <button onClick={() => [handlePageUp(fetchNumber), scrollToTop()]} > <i className="fa-solid fa-square-plus"></i></button>
+                    </div>
                 </article>
             </section>
         </main >

@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Components/home';
 import MovieDetail from './Components/movieDetail';
 import Imprint from './Components/imprint';
+import Osterei from './Components/osterei';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/movieDetail/:id" element={<MovieDetail />} />
         <Route path="/imprint/" element={<Imprint />} />
+        <Route path="/osterei/" element={<Osterei />} />
       </Routes>
     </div>
   );

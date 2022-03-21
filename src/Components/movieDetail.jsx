@@ -14,6 +14,7 @@ const MovieDetail = () => {
 
     const { data: trailer } = useFetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=b48ee67edfa90490c5c00809b96d895b&language=de-DE`)
 
+
     movie && (movie.genres.map((genreName) => {
         return (
             genreString += genreName.name + ", "

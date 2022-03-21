@@ -185,6 +185,27 @@ main figure h3 {
   font-size: 2rem;
   font-weight: 100;
 }
+main .plusminus {
+  width: 300px;
+  margin: -8% auto 5% auto;
+  text-align: center;
+}
+main .plusminus button {
+  background: #24323f;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+main .plusminus .fa-solid {
+  font-size: 3rem;
+  padding: 0 1rem;
+  color: #fff;
+}
+main .plusminus .fa-solid:hover {
+  color: #21E18C;
+}
 
 footer {
   background: #1A2634;
@@ -343,8 +364,8 @@ footer article .rechts a .fa-solid {
 }
 .technik .toolListe {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3%;
   align-items: center;
 }
 
@@ -359,6 +380,10 @@ footer article .rechts a .fa-solid {
   .details .infos .trailer iframe {
     width: 70%;
     height: 260px;
+  }
+
+  .technik .toolListe {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 @media screen and (min-width: 769px) {
@@ -448,6 +473,10 @@ footer article .rechts a .fa-solid {
   .smartphone {
     display: none;
   }
+
+  .technik .toolListe {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 @media screen and (min-width: 840px) {
   .details .infos .trailer iframe {
@@ -497,6 +526,10 @@ footer article .rechts a .fa-solid {
     font-size: 1.5rem;
     padding: 0 0.5rem;
   }
+
+  .technik .toolListe {
+    grid-template-columns: repeat(7, 1fr);
+  }
 }
 @media screen and (min-width: 1024px) {
   main .movList {
@@ -518,6 +551,10 @@ footer article .rechts a .fa-solid {
     width: 70%;
     height: 270px;
   }
+
+  .technik .toolListe {
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
 @media screen and (min-width: 1441px) {
   header, main, footer {
@@ -525,8 +562,10 @@ footer article .rechts a .fa-solid {
   }
 
   .urheber {
-    font-size: 0.6rem;
-    padding: 0.5rem 0 2rem 0;
+    font-size: 0.8rem;
+    padding: 0.5rem 24px 2rem 0;
     width: 1440px;
+    margin: 0 auto;
+    text-align: right;
   }
 }/*# sourceMappingURL=main.css.map */

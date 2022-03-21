@@ -49,16 +49,19 @@ const Home = () => {
 
         switch (fNumber) {
             case 1:
+                if (pageDefault === 1) { return };
                 setPageDefault((initial) => {
                     return initial - 1;
                 })
                 break;
             case 2:
+                if (pageSearch === 1) { return };
                 setPageSearch((initial) => {
                     return initial - 1;
                 })
                 break;
             case 3:
+                if (pageCheck === 1) { return };
                 setPageCheck((initial) => {
                     return initial - 1;
                 })
@@ -192,7 +195,7 @@ const Home = () => {
 
     const navigate = useNavigate()
     const routeChange = () => {
-        let path = `/imprint`
+        let path = `/osterei`
         navigate(path)
     }
 
