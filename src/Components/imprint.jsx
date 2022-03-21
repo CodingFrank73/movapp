@@ -1,11 +1,25 @@
-import { Link } from 'react-router-dom'
+import { Link, } from 'react-router-dom'
+import { useEffect } from 'react';
 import Footer from "./footer";
 
 const Imprint = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop()
+    })
+
+
     return (
         <div>
             <header>
-                <h1><Link to={-1}><b>.</b>MOV </Link></h1>
+                <h1><Link to={"/"}><b>.</b>MOV </Link></h1>
             </header>
 
 
