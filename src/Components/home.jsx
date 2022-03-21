@@ -207,7 +207,7 @@ const Home = () => {
                 <div className="searchbar">
                     <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
                     {/* <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && setSearchValue(e.target.value)} /> */}
-                    <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && (e.target.value !== "osterei" ? setSearchValue(e.target.value) : routeChange())} />
+                    <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && (e.target.value === "osterei" ? routeChange() : (e.target.value === "" ? setDefaultScreen(true) : setSearchValue(e.target.value)))} />
                 </div>
 
                 <Collapsible trigger="q">
