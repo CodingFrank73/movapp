@@ -5,7 +5,6 @@ import db_genre from '../Data/db_genre.json'
 
 const MovieList = ({ movies, fetchNumber, handlePageUp, handlePageDown }) => {
     const [genreArr] = useState(db_genre.genres);
-    const [title, setTitle] = useState('')
 
     const scrollToTop = () => {
         window.scrollTo({
