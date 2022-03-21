@@ -5,7 +5,7 @@ import db_genre from '../Data/db_genre.json'
 
 const MovieList = ({ movies, fetchNumber, handlePageUp, handlePageDown }) => {
     const [genreArr] = useState(db_genre.genres);
-    // const [title, setTitle] = useState('')
+    const [title, setTitle] = useState('')
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -20,7 +20,6 @@ const MovieList = ({ movies, fetchNumber, handlePageUp, handlePageDown }) => {
                 <article>
 
                     {fetchNumber !== 1 ? <h2>Result</h2> : <h2>Popular movies</h2>}
-                    {/* <h2>Popular movies</h2> */}
 
                     <div className="movList">
                         {movies && (

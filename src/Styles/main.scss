@@ -39,10 +39,6 @@
         }
     }
 
-    lable{
-        display:block;
-        padding-bottom: 3rem;
-    }
 
 }
 
@@ -357,7 +353,7 @@ main{
     }
 }
     .technik{
-       padding-bottom: 4%;
+        padding-bottom: 4%;
 
         h2{
         font-size: 1.8rem;
@@ -367,12 +363,11 @@ main{
 
         .toolListe{
             display: grid;
-            grid-template-columns: repeat(8,fr);
+            grid-template-columns: repeat(8, 1fr);
             gap:2rem;
             align-items: center;
         }
-
-}
+    }
 
 
 

@@ -7,7 +7,7 @@ const Footer = () => {
             <footer>
                 <article>
                     <div className="block">
-                        <div className="links"><Link to={-1}><b>.</b>MOV</Link></div>
+                        <div className="links"><Link to="/"><b>.</b>MOV</Link></div>
                         <div className="imprint"><Link to={"/imprint"}>Imprint</Link></div>
                     </div>
                     <div className="mitte">

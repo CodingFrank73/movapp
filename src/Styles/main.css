@@ -76,10 +76,6 @@ img {
 .Collapsible__contentInner ul li {
   padding: 0.5rem 1rem;
 }
-.Collapsible__contentInner lable {
-  display: block;
-  padding-bottom: 3rem;
-}
 
 header {
   background: #1A2634;
@@ -347,7 +343,7 @@ footer article .rechts a .fa-solid {
 }
 .technik .toolListe {
   display: grid;
-  grid-template-columns: repeat(8, fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 2rem;
   align-items: center;
 }

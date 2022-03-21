@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import Collapsible from 'react-collapsible';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Footer from './footer';
 import MovieList from './movieList';
 
@@ -139,7 +139,6 @@ const Home = () => {
 
 
     useEffect(() => {
-        // console.log(valueArr)
         setGenreId(valueArr.join())
     }, [valueArr]);
 
@@ -190,6 +189,13 @@ const Home = () => {
 
     }, [genreId, pageCheck]);
 
+
+    const navigate = useNavigate()
+    const routeChange = () => {
+        let path = `/imprint`
+        navigate(path)
+    }
+
     return (
         <div className="movieList">
 
@@ -197,7 +203,8 @@ const Home = () => {
                 <h1> <Link to="/"><b>.</b>MOV</Link></h1>
                 <div className="searchbar">
                     <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-                    <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && setSearchValue(e.target.value)} />
+                    {/* <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && setSearchValue(e.target.value)} /> */}
+                    <input type="text" placeholder='search something here' onKeyPress={(e) => e.key === 'Enter' && (e.target.value !== "osterei" ? setSearchValue(e.target.value) : routeChange())} />
                 </div>
 
                 <Collapsible trigger="q">
