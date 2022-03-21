@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Footer from "./footer";
 
 const Osterei = () => {
+
     return (
         <div>
             <header>
