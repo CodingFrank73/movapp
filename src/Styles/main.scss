@@ -109,7 +109,7 @@ header{
 main{
     background: #24323f;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     margin: 0 auto;
 
     section{
@@ -337,6 +337,7 @@ main{
 //  -------------------------------
 .imPrint{
     padding-top: 130px;
+    padding-bottom: 34%;
 }
 .desktop{
     display:none;
@@ -353,8 +354,8 @@ main{
     display: grid;
     grid-template-columns: 20% 20% 60%;
     gap: 1rem;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 4%;
+    padding-bottom: 20%;
     
     .heldName{
     font-family: 'JL';
@@ -373,7 +374,7 @@ main{
 }
     .technik{
         padding-top: 5%;
-        padding-bottom: 8%;
+        padding-bottom: 10%;
 
         h2{
         font-size: 1.8rem;
@@ -405,6 +406,10 @@ main{
         }
         .technik .toolListe{
             grid-template-columns: repeat(5, 1fr);
+        }
+        .technik{
+            padding-top: 5%;
+            padding-bottom: 0%;
         }
 
     }
@@ -496,6 +501,11 @@ main{
                     }
                 }
             }
+
+        }
+        
+        .imPrint{
+            padding-bottom: 4%;
         }
         .desktop{
             display:initial;
@@ -503,6 +513,14 @@ main{
         }
         .smartphone{
             display: none;
+        }
+        .superhelden{
+            padding-top: 6%;
+            padding-bottom: 6%;
+        }
+        .technik{
+            padding-top: 5%;
+            padding-bottom: 12%;
         }
         .technik .toolListe{
             grid-template-columns: repeat(6, 1fr);
@@ -516,6 +534,10 @@ main{
             width: 100%;
             height: 300px;
         }
+        
+        .imPrint{
+            padding-bottom: 5%;
+        }
 
         footer{
         
@@ -527,7 +549,6 @@ main{
                 .block{
                     display: flex;
                     
-                
                     .links{
                         display: initial;
                         text-align: left;
@@ -539,6 +560,8 @@ main{
                             color:#21E18C;
                         }
                     }  
+
+
                     .links a:hover{
                         color: #21E18C;
                         
@@ -568,10 +591,14 @@ main{
                         padding: 0 0.5rem;
                     }
                 }
-            
             }
-            
         }
+        
+        .technik{
+            padding-top: 5%;
+            padding-bottom: 7%;
+        }
+
         .technik .toolListe{
             grid-template-columns: repeat(7, 1fr);
         }
@@ -598,6 +625,12 @@ main{
             width: 70%;
             height: 270px;
         }
+
+        .technik{
+            padding-top: 5%;
+            padding-bottom: 2%;
+        }
+
         .technik .toolListe{
             grid-template-columns: repeat(8, 1fr);
         }
@@ -616,4 +649,10 @@ main{
             margin: 0 auto;
             text-align: right;
         }
+        .technik{
+            padding-top: 5%;
+            padding-bottom: 2%;
+        }
+        
     }
+    
