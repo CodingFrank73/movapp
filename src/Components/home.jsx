@@ -192,7 +192,6 @@ const Home = () => {
 
     }, [genreId, pageCheck]);
 
-
     const navigate = useNavigate()
     const routeChange = () => {
         let path = `/osterei`
@@ -247,7 +246,6 @@ const Home = () => {
                         </li>
                     </ul>
                 </Collapsible>
-
 
             </header>
 
