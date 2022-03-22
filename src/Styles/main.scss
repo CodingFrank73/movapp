@@ -15,7 +15,7 @@
     padding: 6px 8px 8px 8px;
     cursor: pointer;
     width: 180px;
- }
+}
 
 .Collapsible__contentInner{
     font-family: 'Anton';
@@ -36,11 +36,7 @@
             padding: 0.5rem 1rem;
         }
     }
-
-
 }
-
-
 
 
 // --------------------
@@ -56,13 +52,13 @@ header{
     position: fixed;
     z-index: 2;
 
- 
     h1{
         font-family: 'Anton';
         font-size: 3rem;
         font-weight: 100;
         color: #fff;
         margin: 24px 0 0 8%;
+        display: inline-block;
 
         b{
             color:#21E18C;
@@ -267,6 +263,8 @@ main{
                 font-family: 'RockSalt';
                 color: #1A2634;
                 text-align: center;
+                // cursor: url(/public/img/doves.png), auto;
+                cursor: -webkit-zoom-in;
 
                 .fa-solid {
                     font-size: 3rem;
@@ -355,7 +353,8 @@ main{
     display: grid;
     grid-template-columns: 20% 20% 60%;
     gap: 1rem;
-    
+    padding-top: 3%;
+    padding-bottom: 3%;
     
     .heldName{
     font-family: 'JL';
@@ -373,7 +372,8 @@ main{
     }
 }
     .technik{
-        padding-bottom: 4%;
+        padding-top: 5%;
+        padding-bottom: 8%;
 
         h2{
         font-size: 1.8rem;
@@ -384,7 +384,8 @@ main{
         .toolListe{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 3%;
+            gap: 5%;
+            row-gap: 15%;
             align-items: center;
         }
     }

@@ -22,7 +22,6 @@ const Imprint = () => {
                 <h1><Link to={"/"}><b>.</b>MOV </Link></h1>
             </header>
 
-
             <main>
                 <section className="imPrint">
                     <img src="../img/imprint_monochrome.png" alt="Die Crew" className="desktop"></img>
@@ -52,22 +51,22 @@ const Imprint = () => {
                     <article className="technik">
                         <h2>Applied Tools and Techniques</h2>
                         <div className="toolListe">
-                            <div><img src="../img/logo-googlemeet.png" alt="googlemeet"></img></div>
-                            <div><img src="../img/logo-figma.png" alt="figma"></img></div>
-                            <div><img src="../img/logo-html.png" alt="html"></img></div>
-                            <div><img src="../img/logo-css.png" alt="css"></img></div>
-                            <div><img src="../img/logo-js.png" alt="js"></img></div>
-                            <div><img src="../img/logo-sass.png" alt="sass"></img></div>
-                            <div><img src="../img/logo-api.png" alt="api"></img></div>
-                            <div><img src="../img/logo-tmdb.png" alt="tmdb"></img></div>
-                            <div><img src="../img/logo-github.png" alt="github"></img></div>
-                            <div><img src="../img/logo-react.png" alt="react"></img></div>
-                            <div><img src="../img/logo-vscode.png" alt="vscode"></img></div>
-                            <div><img src="../img/logo-miro.png" alt="miro"></img></div>
-                            <div><img src="../img/logo-netlify.png" alt="netlify"></img></div>
-                            <div><img src="../img/logo-discord.png" alt="discord"></img></div>
-                            <div><img src="../img/logo-dafont.png" alt="discord"></img></div>
-                            <div><img src="../img/logo-gimp.png" alt="gimp"></img></div>
+                            <div><a href="https://workspace.google.com/intl/de/" target="_blank" rel='noreferrer'><img src="../img/logo-googlemeet.png" alt="googlemeet"></img></a></div>
+                            <div><a href="https://www.figma.com/" target="_blank" rel='noreferrer'><img src="../img/logo-figma.png" alt="figma"></img></a></div>
+                            <div><a href="https://miro.com/app/dashboard/" target="_blank" rel='noreferrer'><img src="../img/logo-miro.png" alt="miro"></img></a></div>
+                            <div><a href="https://discord.com/" target="_blank" rel='noreferrer'><img src="../img/logo-discord.png" alt="discord"></img></a></div>
+                            <div><a href="https://www.w3schools.com/html/" target="_blank" rel='noreferrer'><img src="../img/logo-html.png" alt="html"></img></a></div>
+                            <div><a href="https://developer.mozilla.org/de/docs/Web/JavaScript" target="_blank" rel='noreferrer'><img src="../img/logo-css.png" alt="css"></img></a></div>
+                            <div><a href="https://developer.mozilla.org/de/docs/Web/JavaScript" target="_blank" rel='noreferrer'><img src="../img/logo-js.png" alt="js"></img></a></div>
+                            <div><a href="https://sass-lang.com/" target="_blank" rel='noreferrer'><img src="../img/logo-sass.png" alt="sass"></img></a></div>
+                            <div><a href="https://code.visualstudio.com/" target="_blank" rel='noreferrer'><img src="../img/logo-vscode.png" alt="vscode"></img></a></div>
+                            <div><a href="https://reactjs.org/" target="_blank" rel='noreferrer'><img src="../img/logo-react.png" alt="react"></img></a></div>
+                            <div><a href="https://www.themoviedb.org/" target="_blank" rel='noreferrer'><img src="../img/logo-tmdb.png" alt="tmdb"></img></a></div>
+                            <div><a href="https://github.com/" target="_blank" rel='noreferrer'><img src="../img/logo-github.png" alt="github"></img></a></div>
+                            <div><a href="https://www.netlify.com/" target="_blank" rel='noreferrer'><img src="../img/logo-netlify.png" alt="netlify"></img></a></div>
+                            <div><a href="https://fontawesome.com/" target="_blank" rel='noreferrer'><img src="../img/logo-fontawsome.png" alt="fontawsome"></img></a></div>
+                            <div><a href="https://www.dafont.com/de/" target="_blank" rel='noreferrer'><img src="../img/logo-dafont.png" alt="discord"></img></a></div>
+                            <div><a href="https://www.gimp.org/" target="_blank" rel='noreferrer'><img src="../img/logo-gimp.png" alt="gimp"></img></a></div>
                         </div>
                     </article>
                 </section>
